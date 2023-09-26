@@ -3,11 +3,10 @@
 .navMenuCentralAxity {
   overflow: hidden;
   padding: 1em;
-  color: var(--bodyText);
-  &.teams {
-    font-family: $ms-font-family-fallbacks;
-  }
-  background: var(--cosmos);
+  color: #ffff;
+  font-weight: 700;
+  font-family: "Vita";
+  background: #3c1053;
 }
 
 .welcome {

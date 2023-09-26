@@ -1,6 +1,5 @@
 declare const styles: {
     navMenuCentralAxity: string;
-    teams: string;
     welcome: string;
     welcomeImage: string;
     links: string;
