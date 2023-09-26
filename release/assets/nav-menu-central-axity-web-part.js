@@ -1,4 +1,4 @@
-define("cafeb3ae-a76a-465e-8986-a9543a91cc5f_0.0.1", ["NavMenuCentralAxityWebPartStrings","@microsoft/sp-property-pane","@microsoft/sp-core-library","@microsoft/sp-webpart-base","react","react-dom"], function(__WEBPACK_EXTERNAL_MODULE__2_Et__, __WEBPACK_EXTERNAL_MODULE__26ea__, __WEBPACK_EXTERNAL_MODULE_UWqr__, __WEBPACK_EXTERNAL_MODULE_br4S__, __WEBPACK_EXTERNAL_MODULE_cDcd__, __WEBPACK_EXTERNAL_MODULE_faye__) { return /******/ (function(modules) { // webpackBootstrap
+define("cafeb3ae-a76a-465e-8986-a9543a91cc5f_0.0.1", ["NavMenuCentralAxityWebPartStrings","@microsoft/sp-property-pane","@microsoft/sp-core-library","@microsoft/sp-webpart-base","react","react-dom","@microsoft/sp-http"], function(__WEBPACK_EXTERNAL_MODULE__2_Et__, __WEBPACK_EXTERNAL_MODULE__26ea__, __WEBPACK_EXTERNAL_MODULE_UWqr__, __WEBPACK_EXTERNAL_MODULE_br4S__, __WEBPACK_EXTERNAL_MODULE_cDcd__, __WEBPACK_EXTERNAL_MODULE_faye__, __WEBPACK_EXTERNAL_MODULE_vlQI__) { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -229,10 +229,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var NavMenuCentralAxity = function (props) {
+    var listMenu = props.listMenu;
+    console.log("listMenu 1", listMenu);
     return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null,
-        "Hello world!",
-        " ",
-        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { type: "button", className: "btn btn-primary" }, "Primary")));
+        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("nav", null, listMenu !== undefined
+            ? "".concat(listMenu.map(function (itemMenu, index) { return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("ul", { key: index },
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("ul", null, "hello"))); }))
+            : "")));
 };
 /* harmony default export */ __webpack_exports__["default"] = (NavMenuCentralAxity);
 
@@ -261,6 +264,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! NavMenuCentralAxityWebPartStrings */ "2/Et");
 /* harmony import */ var NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_NavMenuCentralAxity__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/NavMenuCentralAxity */ "OERf");
+/* harmony import */ var _components_constants_routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/constants/routes */ "r/Nz");
+/* harmony import */ var _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @microsoft/sp-http */ "vlQI");
+/* harmony import */ var _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_microsoft_sp_http__WEBPACK_IMPORTED_MODULE_8__);
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -276,6 +282,64 @@ var __extends = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __spreadArray = (undefined && undefined.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+
+
 
 
 
@@ -288,7 +352,8 @@ var NavMenuCentralAxityWebPart = /** @class */ (function (_super) {
     function NavMenuCentralAxityWebPart() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this._isDarkTheme = false;
-        _this._environmentMessage = '';
+        _this._environmentMessage = "";
+        _this._listMenu = [];
         return _this;
     }
     NavMenuCentralAxityWebPart.prototype.render = function () {
@@ -297,39 +362,58 @@ var NavMenuCentralAxityWebPart = /** @class */ (function (_super) {
             isDarkTheme: this._isDarkTheme,
             environmentMessage: this._environmentMessage,
             hasTeamsContext: !!this.context.sdks.microsoftTeams,
-            userDisplayName: this.context.pageContext.user.displayName
+            userDisplayName: this.context.pageContext.user.displayName,
+            listMenu: this._listMenu,
         });
         react_dom__WEBPACK_IMPORTED_MODULE_1__["render"](element, this.domElement);
     };
     NavMenuCentralAxityWebPart.prototype.onInit = function () {
         var _this = this;
-        return this._getEnvironmentMessage().then(function (message) {
-            _this._environmentMessage = message;
+        return this._getListMenu().then(function (list) {
+            _this._listMenu = list;
         });
     };
-    NavMenuCentralAxityWebPart.prototype._getEnvironmentMessage = function () {
-        var _this = this;
-        if (!!this.context.sdks.microsoftTeams) { // running in Teams, office.com or Outlook
-            return this.context.sdks.microsoftTeams.teamsJs.app.getContext()
-                .then(function (context) {
-                var environmentMessage = '';
-                switch (context.app.host.name) {
-                    case 'Office': // running in Office
-                        environmentMessage = _this.context.isServedFromLocalhost ? NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppLocalEnvironmentOffice"] : NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppOfficeEnvironment"];
-                        break;
-                    case 'Outlook': // running in Outlook
-                        environmentMessage = _this.context.isServedFromLocalhost ? NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppLocalEnvironmentOutlook"] : NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppOutlookEnvironment"];
-                        break;
-                    case 'Teams': // running in Teams
-                        environmentMessage = _this.context.isServedFromLocalhost ? NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppLocalEnvironmentTeams"] : NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppTeamsTabEnvironment"];
-                        break;
-                    default:
-                        throw new Error('Unknown host');
+    NavMenuCentralAxityWebPart.prototype._getListMenu = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var listTitle, endpointList, response, dataResponse, itemsMenuFather, listMenu;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        listTitle = _components_constants_routes__WEBPACK_IMPORTED_MODULE_7__["NAME_LIST"].navMenu;
+                        endpointList = "".concat(_components_constants_routes__WEBPACK_IMPORTED_MODULE_7__["ROUTES"].generic).concat(_components_constants_routes__WEBPACK_IMPORTED_MODULE_7__["ROUTES"].routeListConsultatory, "/_api/web/lists/getbytitle('").concat(listTitle, "')/items");
+                        return [4 /*yield*/, this.context.spHttpClient.get(endpointList, _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_8__["SPHttpClient"].configurations.v1)];
+                    case 1:
+                        response = _a.sent();
+                        return [4 /*yield*/, response.json()];
+                    case 2:
+                        dataResponse = _a.sent();
+                        itemsMenuFather = this._getItemFatherMenu(__spreadArray([], dataResponse.value, true));
+                        listMenu = this._generateListMenu(__spreadArray([], itemsMenuFather, true), __spreadArray([], dataResponse.value, true));
+                        return [2 /*return*/, Promise.resolve(this._getListMenuOrder(__spreadArray([], listMenu, true)))];
                 }
-                return environmentMessage;
             });
-        }
-        return Promise.resolve(this.context.isServedFromLocalhost ? NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppLocalEnvironmentSharePoint"] : NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["AppSharePointEnvironment"]);
+        });
+    };
+    NavMenuCentralAxityWebPart.prototype._getListMenuOrder = function (dataResponse) {
+        return dataResponse.length > 0
+            ? dataResponse.sort(function (a, b) { return a.Orden - b.Orden; })
+            : [];
+    };
+    NavMenuCentralAxityWebPart.prototype._generateListMenu = function (dataFather, dataResponse) {
+        var _this = this;
+        return dataFather.map(function (item) { return (__assign(__assign({}, item), { children: _this._getChildrenMenuById(__assign({}, item), __spreadArray([], dataResponse, true)) })); });
+    };
+    NavMenuCentralAxityWebPart.prototype._getItemFatherMenu = function (dataResponse) {
+        var itemData = dataResponse.filter(function (item) {
+            return item.CategoriaPadreId === null;
+        });
+        return itemData;
+    };
+    NavMenuCentralAxityWebPart.prototype._getChildrenMenuById = function (itemFather, dataResponse) {
+        var itemData = dataResponse.filter(function (item) {
+            return item.CategoriaPadreId === itemFather.ID;
+        });
+        return this._getListMenuOrder(__spreadArray([], itemData, true));
     };
     NavMenuCentralAxityWebPart.prototype.onThemeChanged = function (currentTheme) {
         if (!currentTheme) {
@@ -338,9 +422,9 @@ var NavMenuCentralAxityWebPart = /** @class */ (function (_super) {
         this._isDarkTheme = !!currentTheme.isInverted;
         var semanticColors = currentTheme.semanticColors;
         if (semanticColors) {
-            this.domElement.style.setProperty('--bodyText', semanticColors.bodyText || null);
-            this.domElement.style.setProperty('--link', semanticColors.link || null);
-            this.domElement.style.setProperty('--linkHovered', semanticColors.linkHovered || null);
+            this.domElement.style.setProperty("--bodyText", semanticColors.bodyText || null);
+            this.domElement.style.setProperty("--link", semanticColors.link || null);
+            this.domElement.style.setProperty("--linkHovered", semanticColors.linkHovered || null);
         }
     };
     NavMenuCentralAxityWebPart.prototype.onDispose = function () {
@@ -348,7 +432,7 @@ var NavMenuCentralAxityWebPart = /** @class */ (function (_super) {
     };
     Object.defineProperty(NavMenuCentralAxityWebPart.prototype, "dataVersion", {
         get: function () {
-            return _microsoft_sp_core_library__WEBPACK_IMPORTED_MODULE_2__["Version"].parse('1.0');
+            return _microsoft_sp_core_library__WEBPACK_IMPORTED_MODULE_2__["Version"].parse("1.0");
         },
         enumerable: false,
         configurable: true
@@ -358,20 +442,20 @@ var NavMenuCentralAxityWebPart = /** @class */ (function (_super) {
             pages: [
                 {
                     header: {
-                        description: NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["PropertyPaneDescription"]
+                        description: NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["PropertyPaneDescription"],
                     },
                     groups: [
                         {
                             groupName: NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["BasicGroupName"],
                             groupFields: [
-                                Object(_microsoft_sp_property_pane__WEBPACK_IMPORTED_MODULE_3__["PropertyPaneTextField"])('description', {
-                                    label: NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["DescriptionFieldLabel"]
-                                })
-                            ]
-                        }
-                    ]
-                }
-            ]
+                                Object(_microsoft_sp_property_pane__WEBPACK_IMPORTED_MODULE_3__["PropertyPaneTextField"])("description", {
+                                    label: NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["DescriptionFieldLabel"],
+                                }),
+                            ],
+                        },
+                    ],
+                },
+            ],
         };
     };
     return NavMenuCentralAxityWebPart;
@@ -462,6 +546,28 @@ if(content.locals) module.exports = content.locals;
 
 /***/ }),
 
+/***/ "r/Nz":
+/*!*************************************************************************!*\
+  !*** ./lib/webparts/navMenuCentralAxity/components/constants/routes.js ***!
+  \*************************************************************************/
+/*! exports provided: ROUTES, NAME_LIST */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROUTES", function() { return ROUTES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NAME_LIST", function() { return NAME_LIST; });
+var ROUTES = {
+    generic: "https://intellego365.sharepoint.com/sites/",
+    routeListConsultatory: "CentralAxity/M%C3%A9xico/Consultoria2",
+};
+var NAME_LIST = {
+    navMenu: "NavMenu",
+};
+
+
+/***/ }),
+
 /***/ "vicT":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -493,6 +599,17 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "vlQI":
+/*!*************************************!*\
+  !*** external "@microsoft/sp-http" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_vlQI__;
+
+/***/ }),
+
 /***/ "xMn6":
 /*!*****************************************************************!*\
   !*** ./node_modules/@microsoft/load-themed-styles/lib/index.js ***!
@@ -502,34 +619,34 @@ module.exports = g;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
-// Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
-// See LICENSE in the project root for license information.
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
+/**
+ * An IThemingInstruction can specify a rawString to be preserved or a theme slot and a default value
+ * to use if that slot is not specified by the theme.
+ */
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.splitStyles = exports.detokenize = exports.clearStyles = exports.loadTheme = exports.flush = exports.configureRunMode = exports.configureLoadStyles = exports.loadStyles = void 0;
+// IE needs to inject styles using cssText. However, we need to evaluate this lazily, so this
+// value will initialize as undefined, and later will be set once on first loadStyles injection.
+var _injectStylesWithCssText;
 // Store the theming state in __themeState__ global scope for reuse in the case of duplicate
 // load-themed-styles hosted on the page.
-var _root = typeof window === 'undefined' ? global : window; // eslint-disable-line @typescript-eslint/no-explicit-any
-// Nonce string to inject into script tag if one provided. This is used in CSP (Content Security Policy).
-var _styleNonce = _root && _root.CSPSettings && _root.CSPSettings.nonce;
+var _root = (typeof window === 'undefined') ? global : window; // tslint:disable-line:no-any
 var _themeState = initializeThemeState();
 /**
  * Matches theming tokens. For example, "[theme: themeSlotName, default: #FFF]" (including the quotes).
  */
+// tslint:disable-next-line:max-line-length
 var _themeTokenRegex = /[\'\"]\[theme:\s*(\w+)\s*(?:\,\s*default:\s*([\\"\']?[\.\,\(\)\#\-\s\w]*[\.\,\(\)\#\-\w][\"\']?))?\s*\][\'\"]/g;
-var now = function () {
-    return typeof performance !== 'undefined' && !!performance.now ? performance.now() : Date.now();
-};
+/** Maximum style text length, for supporting IE style restrictions. */
+var MAX_STYLE_CONTENT_SIZE = 10000;
+var now = function () { return (typeof performance !== 'undefined' && !!performance.now) ? performance.now() : Date.now(); };
 function measure(func) {
     var start = now();
     func();
@@ -546,17 +663,17 @@ function initializeThemeState() {
         registeredStyles: []
     };
     if (!state.runState) {
-        state = __assign(__assign({}, state), { perf: {
+        state = __assign({}, (state), { perf: {
                 count: 0,
                 duration: 0
             }, runState: {
                 flushTimer: 0,
-                mode: 0 /* Mode.sync */,
+                mode: 0 /* sync */,
                 buffer: []
             } });
     }
     if (!state.registeredThemableStyles) {
-        state = __assign(__assign({}, state), { registeredThemableStyles: [] });
+        state = __assign({}, (state), { registeredThemableStyles: [] });
     }
     _root.__themeState__ = state;
     return state;
@@ -571,8 +688,11 @@ function loadStyles(styles, loadAsync) {
     if (loadAsync === void 0) { loadAsync = false; }
     measure(function () {
         var styleParts = Array.isArray(styles) ? styles : splitStyles(styles);
+        if (_injectStylesWithCssText === undefined) {
+            _injectStylesWithCssText = shouldUseCssText();
+        }
         var _a = _themeState.runState, mode = _a.mode, buffer = _a.buffer, flushTimer = _a.flushTimer;
-        if (loadAsync || mode === 1 /* Mode.async */) {
+        if (loadAsync || mode === 1 /* async */) {
             buffer.push(styleParts);
             if (!flushTimer) {
                 _themeState.runState.flushTimer = asyncLoadStyles();
@@ -619,9 +739,7 @@ exports.flush = flush;
  * register async loadStyles
  */
 function asyncLoadStyles() {
-    // Use "self" to distinguish conflicting global typings for setTimeout() from lib.dom.d.ts vs Jest's @types/node
-    // https://github.com/jestjs/jest/issues/14418
-    return self.setTimeout(function () {
+    return setTimeout(function () {
         _themeState.runState.flushTimer = 0;
         flush();
     }, 0);
@@ -637,7 +755,9 @@ function applyThemableStyles(stylesArray, styleRecord) {
         _themeState.loadStyles(resolveThemableArray(stylesArray).styleString, stylesArray);
     }
     else {
-        registerStyles(stylesArray);
+        _injectStylesWithCssText ?
+            registerStylesIE(stylesArray, styleRecord) :
+            registerStyles(stylesArray);
     }
 }
 /**
@@ -653,16 +773,16 @@ function loadTheme(theme) {
 exports.loadTheme = loadTheme;
 /**
  * Clear already registered style elements and style records in theme_State object
- * @param option - specify which group of registered styles should be cleared.
+ * @option: specify which group of registered styles should be cleared.
  * Default to be both themable and non-themable styles will be cleared
  */
 function clearStyles(option) {
-    if (option === void 0) { option = 3 /* ClearStyleOptions.all */; }
-    if (option === 3 /* ClearStyleOptions.all */ || option === 2 /* ClearStyleOptions.onlyNonThemable */) {
+    if (option === void 0) { option = 3 /* all */; }
+    if (option === 3 /* all */ || option === 2 /* onlyNonThemable */) {
         clearStylesInternal(_themeState.registeredStyles);
         _themeState.registeredStyles = [];
     }
-    if (option === 3 /* ClearStyleOptions.all */ || option === 1 /* ClearStyleOptions.onlyThemable */) {
+    if (option === 3 /* all */ || option === 1 /* onlyThemable */) {
         clearStylesInternal(_themeState.registeredThemableStyles);
         _themeState.registeredThemableStyles = [];
     }
@@ -687,7 +807,7 @@ function reloadStyles() {
             themableStyles.push(styleRecord.themableStyle);
         }
         if (themableStyles.length > 0) {
-            clearStyles(1 /* ClearStyleOptions.onlyThemable */);
+            clearStyles(1 /* onlyThemable */);
             applyThemableStyles([].concat.apply([], themableStyles));
         }
     }
@@ -721,14 +841,8 @@ function resolveThemableArray(splitStyleArray) {
             var defaultValue = currentValue.defaultValue || 'inherit';
             // Warn to console if we hit an unthemed value even when themes are provided, but only if "DEBUG" is true.
             // Allow the themedValue to be undefined to explicitly request the default value.
-            if (theme &&
-                !themedValue &&
-                console &&
-                !(themeSlot in theme) &&
-                "boolean" !== 'undefined' &&
-                true) {
-                // eslint-disable-next-line no-console
-                console.warn("Theming value not provided for \"".concat(themeSlot, "\". Falling back to \"").concat(defaultValue, "\"."));
+            if (theme && !themedValue && console && !(themeSlot in theme) && "boolean" !== 'undefined' && true) {
+                console.warn("Theming value not provided for \"" + themeSlot + "\". Falling back to \"" + defaultValue + "\".");
             }
             return themedValue || defaultValue;
         }
@@ -750,8 +864,8 @@ function splitStyles(styles) {
     var result = [];
     if (styles) {
         var pos = 0; // Current position in styles.
-        var tokenMatch = void 0;
-        while ((tokenMatch = _themeTokenRegex.exec(styles))) {
+        var tokenMatch = void 0; // tslint:disable-line:no-null-keyword
+        while (tokenMatch = _themeTokenRegex.exec(styles)) {
             var matchIndex = tokenMatch.index;
             if (matchIndex > pos) {
                 result.push({
@@ -780,25 +894,13 @@ exports.splitStyles = splitStyles;
  * @param {IStyleRecord} styleRecord May specify a style Element to update.
  */
 function registerStyles(styleArray) {
-    if (typeof document === 'undefined') {
-        return;
-    }
     var head = document.getElementsByTagName('head')[0];
     var styleElement = document.createElement('style');
     var _a = resolveThemableArray(styleArray), styleString = _a.styleString, themable = _a.themable;
-    styleElement.setAttribute('data-load-themed-styles', 'true');
-    if (_styleNonce) {
-        styleElement.setAttribute('nonce', _styleNonce);
-    }
+    styleElement.type = 'text/css';
     styleElement.appendChild(document.createTextNode(styleString));
     _themeState.perf.count++;
     head.appendChild(styleElement);
-    var ev = document.createEvent('HTMLEvents');
-    ev.initEvent('styleinsert', true /* bubbleEvent */, false /* cancelable */);
-    ev.args = {
-        newStyle: styleElement
-    };
-    document.dispatchEvent(ev);
     var record = {
         styleElement: styleElement,
         themableStyle: styleArray
@@ -810,7 +912,59 @@ function registerStyles(styleArray) {
         _themeState.registeredStyles.push(record);
     }
 }
+/**
+ * Registers a set of style text, for IE 9 and below, which has a ~30 style element limit so we need
+ * to register slightly differently.
+ * @param {ThemableArray} styleArray Array of IThemingInstruction objects to register.
+ * @param {IStyleRecord} styleRecord May specify a style Element to update.
+ */
+function registerStylesIE(styleArray, styleRecord) {
+    var head = document.getElementsByTagName('head')[0];
+    var registeredStyles = _themeState.registeredStyles;
+    var lastStyleElement = _themeState.lastStyleElement;
+    var stylesheet = lastStyleElement ? lastStyleElement.styleSheet : undefined;
+    var lastStyleContent = stylesheet ? stylesheet.cssText : '';
+    var lastRegisteredStyle = registeredStyles[registeredStyles.length - 1];
+    var resolvedStyleText = resolveThemableArray(styleArray).styleString;
+    if (!lastStyleElement || (lastStyleContent.length + resolvedStyleText.length) > MAX_STYLE_CONTENT_SIZE) {
+        lastStyleElement = document.createElement('style');
+        lastStyleElement.type = 'text/css';
+        if (styleRecord) {
+            head.replaceChild(lastStyleElement, styleRecord.styleElement);
+            styleRecord.styleElement = lastStyleElement;
+        }
+        else {
+            head.appendChild(lastStyleElement);
+        }
+        if (!styleRecord) {
+            lastRegisteredStyle = {
+                styleElement: lastStyleElement,
+                themableStyle: styleArray
+            };
+            registeredStyles.push(lastRegisteredStyle);
+        }
+    }
+    lastStyleElement.styleSheet.cssText += detokenize(resolvedStyleText);
+    Array.prototype.push.apply(lastRegisteredStyle.themableStyle, styleArray); // concat in-place
+    // Preserve the theme state.
+    _themeState.lastStyleElement = lastStyleElement;
+}
+/**
+ * Checks to see if styleSheet exists as a property off of a style element.
+ * This will determine if style registration should be done via cssText (<= IE9) or not
+ */
+function shouldUseCssText() {
+    var useCSSText = false;
+    if (typeof document !== 'undefined') {
+        var emptyStyle = document.createElement('style');
+        emptyStyle.type = 'text/css';
+        useCSSText = !!emptyStyle.styleSheet;
+    }
+    return useCSSText;
+}
+
 //# sourceMappingURL=index.js.map
+
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../sp-build-web/node_modules/webpack/buildin/global.js */ "vicT")))
 
 /***/ })
