@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "nav-menu-central-axity-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/navMenuCentralAxity/NavMenuCentralAxityWebPart.js",
+          "manifest": "./src/webparts/navMenuCentralAxity/NavMenuCentralAxityWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "NavMenuCentralAxityWebPartStrings": "lib/webparts/navMenuCentralAxity/loc/{locale}.js"
+  }
+}

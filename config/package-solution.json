@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "nav-menu-central-axity-client-side-solution",
+    "id": "01134304-c467-46ee-856a-c70258ac100f",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.4"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "NavMenu-CentralAxity description"
+      },
+      "longDescription": {
+        "default": "NavMenu-CentralAxity description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "nav-menu-central-axity Feature",
+        "description": "The feature that activates elements of the nav-menu-central-axity solution.",
+        "id": "90ac3474-c530-4338-8fbf-3a8298488203",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/nav-menu-central-axity.sppkg"
+  }
+}
