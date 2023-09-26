@@ -4,11 +4,11 @@ import { Version } from "@microsoft/sp-core-library";
 import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField,
+  PropertyPaneButton,
+  PropertyPaneButtonType,
 } from "@microsoft/sp-property-pane";
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
 import { IReadonlyTheme } from "@microsoft/sp-component-base";
-
-import * as strings from "NavMenuCentralAxityWebPartStrings";
 import NavMenuCentralAxity from "./components/NavMenuCentralAxity";
 import {
   INavMenuCentralAxityProps,
@@ -16,11 +16,10 @@ import {
 } from "./components/INavMenuCentralAxityProps";
 import { NAME_LIST, ROUTES } from "./components/constants/routes";
 import { SPHttpClient, SPHttpClientResponse } from "@microsoft/sp-http";
-
 export interface INavMenuCentralAxityWebPartProps {
   description: string;
+  textInput: string;
 }
-
 export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<INavMenuCentralAxityWebPartProps> {
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = "";
@@ -46,7 +45,7 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
     });
   }
   private async _getListMenu(): Promise<ItemMenu[]> {
-    const listTitle = NAME_LIST.navMenu; // Reemplaza con el nombre real de la lista
+    const listTitle = NAME_LIST.navMenu;
     const endpointList = `${ROUTES.generic}${ROUTES.routeListConsultatory}/_api/web/lists/getbytitle('${listTitle}')/items`;
     const response: SPHttpClientResponse = await this.context.spHttpClient.get(
       endpointList,
@@ -118,20 +117,44 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
   protected get dataVersion(): Version {
     return Version.parse("1.0");
   }
+  private onButtonClick(): void {
+    console.log("Valor del campo de texto nuevo:", this.properties.textInput);
+    // return this._getListMenu().then((list) => {
+    //   this._listMenu = list;
+    // });
+  }
+
+  // private onTextInputChanged(newValue: string): void {
+  //   // Actualiza el estado con el nuevo valor del campo de texto
+
+  //   this.properties.textInput = newValue;
+  // }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
         {
           header: {
-            description: strings.PropertyPaneDescription,
+            description: "Configuración del Web Part",
           },
+
           groups: [
             {
-              groupName: strings.BasicGroupName,
+              groupName: "Opciones",
+
               groupFields: [
                 PropertyPaneTextField("description", {
-                  label: strings.DescriptionFieldLabel,
+                  label: "Descripción",
+                }),
+
+                PropertyPaneTextField("textInput", {
+                  label: "Texto de entrada",
+                }),
+
+                PropertyPaneButton("myButton", {
+                  text: "Botón",
+                  buttonType: PropertyPaneButtonType.Primary,
+                  onClick: this.onButtonClick.bind(this),
                 }),
               ],
             },

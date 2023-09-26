@@ -4,6 +4,7 @@ import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
 import { IReadonlyTheme } from "@microsoft/sp-component-base";
 export interface INavMenuCentralAxityWebPartProps {
     description: string;
+    textInput: string;
 }
 export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<INavMenuCentralAxityWebPartProps> {
     private _isDarkTheme;
@@ -19,6 +20,7 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
     protected onThemeChanged(currentTheme: IReadonlyTheme | undefined): void;
     protected onDispose(): void;
     protected get dataVersion(): Version;
+    private onButtonClick;
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration;
 }
 //# sourceMappingURL=NavMenuCentralAxityWebPart.d.ts.map

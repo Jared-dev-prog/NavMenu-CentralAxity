@@ -1,13 +1,12 @@
 import * as React from "react";
 import { ItemMenuView } from "./INavMenuCentralAxityProps";
 import "bootstrap/dist/css/bootstrap.min.css";
-import styles from "./NavMenuCentralAxity.module.scss";
 
 const ItemByMenu: React.FC<ItemMenuView> = (props) => {
   const { Title, Link, childrenList } = props;
   console.log("item ", Title, Link, childrenList);
   return (
-    <li className={styles.navMenuCentralAxity}>
+    <li>
       <div>{Title}</div>
       <div>
         {childrenList !== undefined

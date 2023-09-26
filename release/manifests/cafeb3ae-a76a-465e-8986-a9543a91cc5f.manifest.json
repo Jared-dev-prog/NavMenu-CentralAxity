@@ -40,10 +40,6 @@
         "type": "path",
         "path": "nav-menu-central-axity-web-part.js"
       },
-      "NavMenuCentralAxityWebPartStrings": {
-        "type": "path",
-        "path": "NavMenuCentralAxityWebPartStrings_en-us.js"
-      },
       "@microsoft/sp-property-pane": {
         "type": "component",
         "id": "f9e737b7-f0df-4597-ba8c-3060f82380db",

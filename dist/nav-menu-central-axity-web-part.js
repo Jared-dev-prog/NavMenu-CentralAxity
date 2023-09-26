@@ -1,4 +1,4 @@
-define("cafeb3ae-a76a-465e-8986-a9543a91cc5f_0.0.1", ["NavMenuCentralAxityWebPartStrings","@microsoft/sp-property-pane","@microsoft/sp-core-library","@microsoft/sp-webpart-base","react","react-dom","@microsoft/sp-http"], function(__WEBPACK_EXTERNAL_MODULE__2_Et__, __WEBPACK_EXTERNAL_MODULE__26ea__, __WEBPACK_EXTERNAL_MODULE_UWqr__, __WEBPACK_EXTERNAL_MODULE_br4S__, __WEBPACK_EXTERNAL_MODULE_cDcd__, __WEBPACK_EXTERNAL_MODULE_faye__, __WEBPACK_EXTERNAL_MODULE_vlQI__) { return /******/ (function(modules) { // webpackBootstrap
+define("cafeb3ae-a76a-465e-8986-a9543a91cc5f_0.0.1", ["@microsoft/sp-property-pane","@microsoft/sp-core-library","@microsoft/sp-webpart-base","react","react-dom","@microsoft/sp-http"], function(__WEBPACK_EXTERNAL_MODULE__26ea__, __WEBPACK_EXTERNAL_MODULE_UWqr__, __WEBPACK_EXTERNAL_MODULE_br4S__, __WEBPACK_EXTERNAL_MODULE_cDcd__, __WEBPACK_EXTERNAL_MODULE_faye__, __WEBPACK_EXTERNAL_MODULE_vlQI__) { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -99,14 +99,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "q4sD");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _NavMenuCentralAxity_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavMenuCentralAxity.module.scss */ "NZke");
-
 
 
 var ItemByMenu = function (props) {
     var Title = props.Title, Link = props.Link, childrenList = props.childrenList;
     console.log("item ", Title, Link, childrenList);
-    return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("li", { className: _NavMenuCentralAxity_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].navMenuCentralAxity },
+    return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("li", null,
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, Title),
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, childrenList !== undefined
             ? childrenList.map(function (itemMenu, index) { return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { key: index },
@@ -216,17 +214,6 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
 
 /***/ }),
 
-/***/ "2/Et":
-/*!****************************************************!*\
-  !*** external "NavMenuCentralAxityWebPartStrings" ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE__2_Et__;
-
-/***/ }),
-
 /***/ "26ea":
 /*!**********************************************!*\
   !*** external "@microsoft/sp-property-pane" ***!
@@ -249,7 +236,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__26ea__;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "JPst");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".navMenuCentralAxity_963ab75b{background:#3c1053;color:#fff;font-family:Vita;font-weight:700;overflow:hidden;padding:1em}.welcome_963ab75b{text-align:center}.welcomeImage_963ab75b{max-width:420px;width:100%}.links_963ab75b a{color:\"[theme:link, default:#03787c]\";color:var(--link);text-decoration:none}.links_963ab75b a:hover{color:\"[theme:linkHovered, default: #014446]\";color:var(--linkHovered);text-decoration:underline}", ""]);
+exports.push([module.i, ".navMenuCentralAxity_5bdcde4e{background:#3c1053;color:#fff;font-family:Vita;font-weight:700;overflow:hidden}.item_Menu_5bdcde4e{border-right:1px solid #000;padding:10px}", ""]);
 // Exports
 module.exports = exports;
 
@@ -1387,10 +1374,8 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 __webpack_require__(/*! ./NavMenuCentralAxity.module.css */ "f/5p");
 var styles = {
-    navMenuCentralAxity: 'navMenuCentralAxity_963ab75b',
-    welcome: 'welcome_963ab75b',
-    welcomeImage: 'welcomeImage_963ab75b',
-    links: 'links_963ab75b'
+    navMenuCentralAxity: 'navMenuCentralAxity_5bdcde4e',
+    item_Menu: 'item_Menu_5bdcde4e'
 };
 /* harmony default export */ __webpack_exports__["default"] = (styles);
 /* tslint:enable */ 
@@ -1435,50 +1420,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_dist_js_bootstrap_min_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/js/bootstrap.min.js */ "Pkg3");
 /* harmony import */ var bootstrap_dist_js_bootstrap_min_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_js_bootstrap_min_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _ItemByMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ItemByMenu */ "+P1O");
+/* harmony import */ var _NavMenuCentralAxity_module_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavMenuCentralAxity.module.scss */ "NZke");
+
 
 
 
 
 var NavMenuCentralAxity = function (props) {
     var listMenu = props.listMenu;
-    return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "listMenu" },
+    return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _NavMenuCentralAxity_module_scss__WEBPACK_IMPORTED_MODULE_4__["default"].navMenuCentralAxity },
         react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("nav", null,
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "d-flex flex-wrap " }, listMenu !== undefined
-                ? listMenu.map(function (itemMenu, index) { return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("ul", { key: index },
+            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: "d-flex flex-wrap" }, listMenu !== undefined
+                ? listMenu.map(function (itemMenu, index) { return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("ul", { key: index, className: _NavMenuCentralAxity_module_scss__WEBPACK_IMPORTED_MODULE_4__["default"].item_Menu },
                     react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_ItemByMenu__WEBPACK_IMPORTED_MODULE_3__["default"], { Title: itemMenu.Title, Link: itemMenu.Link, childrenList: itemMenu.children }))); })
-                : "")))
-    // <li className="nav-item dropdown">
-    //   <a
-    //     className="nav-link dropdown-toggle"
-    //     href="#"
-    //     role="button"
-    //     data-bs-toggle="dropdown"
-    //     aria-expanded="false"
-    //   >
-    //     Dropdown
-    //   </a>
-    //   <ul className="dropdown-menu">
-    //     <li>
-    //       <a className="dropdown-item" href="#">
-    //         Action
-    //       </a>
-    //     </li>
-    //     <li>
-    //       <a className="dropdown-item" href="#">
-    //         Another action
-    //       </a>
-    //     </li>
-    //     <li>
-    //       <hr className="dropdown-divider" />
-    //     </li>
-    //     <li>
-    //       <a className="dropdown-item" href="#">
-    //         Something else here
-    //       </a>
-    //     </li>
-    //   </ul>
-    // </li>
-    );
+                : ""))));
 };
 /* harmony default export */ __webpack_exports__["default"] = (NavMenuCentralAxity);
 
@@ -1714,12 +1669,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _microsoft_sp_property_pane__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_microsoft_sp_property_pane__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _microsoft_sp_webpart_base__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @microsoft/sp-webpart-base */ "br4S");
 /* harmony import */ var _microsoft_sp_webpart_base__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_microsoft_sp_webpart_base__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! NavMenuCentralAxityWebPartStrings */ "2/Et");
-/* harmony import */ var NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_NavMenuCentralAxity__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/NavMenuCentralAxity */ "OERf");
-/* harmony import */ var _components_constants_routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/constants/routes */ "r/Nz");
-/* harmony import */ var _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @microsoft/sp-http */ "vlQI");
-/* harmony import */ var _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_microsoft_sp_http__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_NavMenuCentralAxity__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/NavMenuCentralAxity */ "OERf");
+/* harmony import */ var _components_constants_routes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/constants/routes */ "r/Nz");
+/* harmony import */ var _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @microsoft/sp-http */ "vlQI");
+/* harmony import */ var _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_microsoft_sp_http__WEBPACK_IMPORTED_MODULE_7__);
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -1799,7 +1752,6 @@ var __spreadArray = (undefined && undefined.__spreadArray) || function (to, from
 
 
 
-
 var NavMenuCentralAxityWebPart = /** @class */ (function (_super) {
     __extends(NavMenuCentralAxityWebPart, _super);
     function NavMenuCentralAxityWebPart() {
@@ -1810,7 +1762,7 @@ var NavMenuCentralAxityWebPart = /** @class */ (function (_super) {
         return _this;
     }
     NavMenuCentralAxityWebPart.prototype.render = function () {
-        var element = react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_NavMenuCentralAxity__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        var element = react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_components_NavMenuCentralAxity__WEBPACK_IMPORTED_MODULE_5__["default"], {
             description: this.properties.description,
             isDarkTheme: this._isDarkTheme,
             environmentMessage: this._environmentMessage,
@@ -1832,9 +1784,9 @@ var NavMenuCentralAxityWebPart = /** @class */ (function (_super) {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        listTitle = _components_constants_routes__WEBPACK_IMPORTED_MODULE_7__["NAME_LIST"].navMenu;
-                        endpointList = "".concat(_components_constants_routes__WEBPACK_IMPORTED_MODULE_7__["ROUTES"].generic).concat(_components_constants_routes__WEBPACK_IMPORTED_MODULE_7__["ROUTES"].routeListConsultatory, "/_api/web/lists/getbytitle('").concat(listTitle, "')/items");
-                        return [4 /*yield*/, this.context.spHttpClient.get(endpointList, _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_8__["SPHttpClient"].configurations.v1)];
+                        listTitle = _components_constants_routes__WEBPACK_IMPORTED_MODULE_6__["NAME_LIST"].navMenu;
+                        endpointList = "".concat(_components_constants_routes__WEBPACK_IMPORTED_MODULE_6__["ROUTES"].generic).concat(_components_constants_routes__WEBPACK_IMPORTED_MODULE_6__["ROUTES"].routeListConsultatory, "/_api/web/lists/getbytitle('").concat(listTitle, "')/items");
+                        return [4 /*yield*/, this.context.spHttpClient.get(endpointList, _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_7__["SPHttpClient"].configurations.v1)];
                     case 1:
                         response = _a.sent();
                         return [4 /*yield*/, response.json()];
@@ -1890,19 +1842,37 @@ var NavMenuCentralAxityWebPart = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
+    NavMenuCentralAxityWebPart.prototype.onButtonClick = function () {
+        console.log("Valor del campo de texto nuevo:", this.properties.textInput);
+        // return this._getListMenu().then((list) => {
+        //   this._listMenu = list;
+        // });
+    };
+    // private onTextInputChanged(newValue: string): void {
+    //   // Actualiza el estado con el nuevo valor del campo de texto
+    //   this.properties.textInput = newValue;
+    // }
     NavMenuCentralAxityWebPart.prototype.getPropertyPaneConfiguration = function () {
         return {
             pages: [
                 {
                     header: {
-                        description: NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["PropertyPaneDescription"],
+                        description: "Configuración del Web Part",
                     },
                     groups: [
                         {
-                            groupName: NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["BasicGroupName"],
+                            groupName: "Opciones",
                             groupFields: [
                                 Object(_microsoft_sp_property_pane__WEBPACK_IMPORTED_MODULE_3__["PropertyPaneTextField"])("description", {
-                                    label: NavMenuCentralAxityWebPartStrings__WEBPACK_IMPORTED_MODULE_5__["DescriptionFieldLabel"],
+                                    label: "Descripción",
+                                }),
+                                Object(_microsoft_sp_property_pane__WEBPACK_IMPORTED_MODULE_3__["PropertyPaneTextField"])("textInput", {
+                                    label: "Texto de entrada",
+                                }),
+                                Object(_microsoft_sp_property_pane__WEBPACK_IMPORTED_MODULE_3__["PropertyPaneButton"])("myButton", {
+                                    text: "Botón",
+                                    buttonType: _microsoft_sp_property_pane__WEBPACK_IMPORTED_MODULE_3__["PropertyPaneButtonType"].Primary,
+                                    onClick: this.onButtonClick.bind(this),
                                 }),
                             ],
                         },
