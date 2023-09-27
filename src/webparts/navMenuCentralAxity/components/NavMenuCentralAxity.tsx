@@ -6,19 +6,20 @@ import ItemByMenu from "./ItemByMenu";
 import styles from "./NavMenuCentralAxity.module.scss";
 const NavMenuCentralAxity: React.FC<INavMenuCentralAxityProps> = (props) => {
   const { listMenu } = props;
+  console.log("listMenu ->", listMenu);
   return (
     <div className={styles.navMenuCentralAxity}>
       <nav>
         <div className="d-flex flex-wrap">
           {listMenu !== undefined
             ? listMenu.map((itemMenu, index) => (
-                <ul key={index} className={styles.item_Menu}>
+                <div key={index} className={styles.item_Menu}>
                   <ItemByMenu
                     Title={itemMenu.Title}
                     Link={itemMenu.Link}
                     childrenList={itemMenu.children}
                   />
-                </ul>
+                </div>
               ))
             : ""}
         </div>
