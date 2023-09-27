@@ -24,6 +24,7 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = "";
   private _listMenu: ItemMenu[] = [];
+  private _textInput: string = "";
 
   public render(): void {
     const element: React.ReactElement<INavMenuCentralAxityProps> =
@@ -118,10 +119,8 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
     return Version.parse("1.0");
   }
   private onButtonClick(): void {
-    console.log("Valor del campo de texto nuevo:", this.properties.textInput);
-    // return this._getListMenu().then((list) => {
-    //   this._listMenu = list;
-    // });
+    const textInputValue = this.properties.textInput;
+    console.log("Valor del campo de texto:", textInputValue);
   }
 
   // private onTextInputChanged(newValue: string): void {
@@ -149,8 +148,8 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
 
                 PropertyPaneTextField("textInput", {
                   label: "Texto de entrada",
+                  value: this._textInput,
                 }),
-
                 PropertyPaneButton("myButton", {
                   text: "Botón",
                   buttonType: PropertyPaneButtonType.Primary,
