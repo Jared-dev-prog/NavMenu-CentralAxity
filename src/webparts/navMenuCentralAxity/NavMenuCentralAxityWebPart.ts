@@ -14,7 +14,7 @@ import {
   INavMenuCentralAxityProps,
   ItemMenu,
 } from "./components/INavMenuCentralAxityProps";
-import { NAME_LIST, ROUTES } from "./components/constants/routes";
+import { NAME_LIST } from "./components/constants/routes";
 import { SPHttpClient, SPHttpClientResponse } from "@microsoft/sp-http";
 export interface INavMenuCentralAxityWebPartProps {
   description: string;
@@ -24,12 +24,11 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = "";
   private _listMenu: ItemMenu[] = [];
-  private _textInput: string = "";
 
   public render(): void {
     const element: React.ReactElement<INavMenuCentralAxityProps> =
       React.createElement(NavMenuCentralAxity, {
-        description: this.properties.description,
+        description: this.properties.textInput,
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
@@ -41,13 +40,12 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
   }
 
   protected onInit(): Promise<void> {
-    return this._getListMenu().then((list) => {
-      this._listMenu = list;
-    });
+    return Promise.resolve();
   }
+
   private async _getListMenu(): Promise<ItemMenu[]> {
     const listTitle = NAME_LIST.navMenu;
-    const endpointList = `${ROUTES.generic}${ROUTES.routeListConsultatory}/_api/web/lists/getbytitle('${listTitle}')/items`;
+    const endpointList = `${this.properties.textInput}/_api/web/lists/getbytitle('${listTitle}')/items`;
     const response: SPHttpClientResponse = await this.context.spHttpClient.get(
       endpointList,
       SPHttpClient.configurations.v1
@@ -118,16 +116,12 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
   protected get dataVersion(): Version {
     return Version.parse("1.0");
   }
-  private onButtonClick(): void {
-    const textInputValue = this.properties.textInput;
-    console.log("Valor del campo de texto:", textInputValue);
+  private onButtonClick(): Promise<void> {
+    return this._getListMenu().then((list) => {
+      this._listMenu = list;
+      this.render();
+    });
   }
-
-  // private onTextInputChanged(newValue: string): void {
-  //   // Actualiza el estado con el nuevo valor del campo de texto
-
-  //   this.properties.textInput = newValue;
-  // }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
@@ -147,11 +141,10 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
                 }),
 
                 PropertyPaneTextField("textInput", {
-                  label: "Texto de entrada",
-                  value: this._textInput,
+                  label: "Ruta (al sitio donde está la lista)",
                 }),
                 PropertyPaneButton("myButton", {
-                  text: "Botón",
+                  text: "Aplicar",
                   buttonType: PropertyPaneButtonType.Primary,
                   onClick: this.onButtonClick.bind(this),
                 }),

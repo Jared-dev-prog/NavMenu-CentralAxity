@@ -10,7 +10,6 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
     private _isDarkTheme;
     private _environmentMessage;
     private _listMenu;
-    private _textInput;
     render(): void;
     protected onInit(): Promise<void>;
     private _getListMenu;

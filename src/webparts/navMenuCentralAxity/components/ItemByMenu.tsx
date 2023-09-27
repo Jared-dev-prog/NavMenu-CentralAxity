@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const ItemByMenu: React.FC<ItemMenuView> = (props) => {
   const { Title, Link, childrenList } = props;
-  console.log("item ", Title, Link, childrenList);
+  console.log("item 2 ", Title, Link, childrenList);
   return (
     <li>
       <div>{Title}</div>
