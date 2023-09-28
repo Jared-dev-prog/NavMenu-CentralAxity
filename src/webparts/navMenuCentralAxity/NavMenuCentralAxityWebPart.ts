@@ -16,6 +16,8 @@ import {
 } from "./components/INavMenuCentralAxityProps";
 import { NAME_LIST } from "./components/constants/routes";
 import { SPHttpClient, SPHttpClientResponse } from "@microsoft/sp-http";
+import { SPComponentLoader } from "@microsoft/sp-loader";
+
 export interface INavMenuCentralAxityWebPartProps {
   description: string;
   textInput: string;
@@ -32,7 +34,9 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName,
+        userDisplayName: SPComponentLoader.loadCss(
+          "https://intellego365.sharepoint.com/sites/CentralAxity/_catalogs/masterpage/CentralAxity/css/nav_fix.css"
+        ),
         listMenu: this._listMenu,
       });
 

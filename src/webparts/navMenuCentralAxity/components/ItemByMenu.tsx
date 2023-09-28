@@ -2,6 +2,7 @@ import * as React from "react";
 import { ItemMenuView } from "./INavMenuCentralAxityProps";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import styles from "./NavMenuCentralAxity.module.scss";
 
 const ItemByMenu: React.FC<ItemMenuView> = (props) => {
   const { Title, Link, childrenList } = props;
@@ -10,28 +11,26 @@ const ItemByMenu: React.FC<ItemMenuView> = (props) => {
     window.open(url);
   };
   return (
-    <div>
-      <div
-        className={""}
-        onClick={() => handleRedirect(Link)}
-        role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false">
-        {Title}
-      </div>
-      <div className={""}>
+    <li>
+      <span className={styles.text_color_white}>{Title}</span>
+      <ul className={styles.dropdown}>
         {childrenList !== undefined
           ? childrenList.map((itemMenu, index) => (
               <div
                 className="dropdown-item"
                 key={index}
-                onClick={() => handleRedirect(itemMenu.Link)}>
-                {itemMenu.Title}
+                onClick={() => handleRedirect(itemMenu.Link)}
+              >
+                <li className={styles.hover_black}>
+                  <span className={styles.text_color_black}>
+                    {itemMenu.Title}
+                  </span>
+                </li>
               </div>
             ))
           : ""}
-      </div>
-    </div>
+      </ul>
+    </li>
   );
 };
 

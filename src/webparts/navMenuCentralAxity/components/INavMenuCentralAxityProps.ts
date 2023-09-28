@@ -3,7 +3,7 @@ export interface INavMenuCentralAxityProps {
   isDarkTheme: boolean;
   environmentMessage: string;
   hasTeamsContext: boolean;
-  userDisplayName: string;
+  userDisplayName: any;
   listMenu: ItemMenu[];
 }
 
