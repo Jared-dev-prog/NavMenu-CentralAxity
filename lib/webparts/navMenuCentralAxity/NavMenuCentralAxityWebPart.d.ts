@@ -5,6 +5,7 @@ import { IReadonlyTheme } from "@microsoft/sp-component-base";
 export interface INavMenuCentralAxityWebPartProps {
     description: string;
     textInput: string;
+    collectionData: any;
 }
 export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<INavMenuCentralAxityWebPartProps> {
     private _isDarkTheme;

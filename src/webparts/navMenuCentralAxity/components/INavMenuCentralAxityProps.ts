@@ -5,6 +5,8 @@ export interface INavMenuCentralAxityProps {
   hasTeamsContext: boolean;
   userDisplayName: any;
   listMenu: ItemMenu[];
+  getListMenu: (route: string) => any;
+  collectionData: any[];
 }
 
 export interface ItemMenu extends ItemMenuView {
@@ -17,4 +19,8 @@ export interface ItemMenuView {
   Title: string;
   Link: string;
   childrenList: ItemMenu[];
+}
+
+export interface collectionData {
+  route: string;
 }
