@@ -9,6 +9,9 @@ declare const styles: {
     text_color_white: string;
     text_color_black: string;
     hover_black: string;
+    contentMenuResponse: string;
+    contentIndexMenu: string;
+    navResponsive: string;
 };
 export default styles;
 //# sourceMappingURL=NavMenuCentralAxity.module.scss.d.ts.map
