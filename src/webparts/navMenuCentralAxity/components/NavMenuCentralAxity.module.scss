@@ -48,7 +48,6 @@
 .nav_content {
   width: 100%;
   height: 100%;
-  font-weight: 700;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 // ul.nav {
@@ -74,7 +73,9 @@
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  padding: 0;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
   list-style: none;
   background: #3c1053;
   color: #e7e6f1;
@@ -194,7 +195,8 @@
   background: #f1f1f1;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  box-shadow: 1px 2px 5px -1px rgba(0, 0, 0, 0.15), 0px 4px 14px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 5px -1px rgba(0, 0, 0, 0.15),
+    0px 4px 14px -1px rgba(0, 0, 0, 0.1);
   transform: translate(0, -60px);
   transition: transform 0.2s ease-out, opacity 0.2s, z-index 0s 0.2s;
   z-index: -1;

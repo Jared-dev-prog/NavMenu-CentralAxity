@@ -11,8 +11,6 @@ import styles from "./NavMenuCentralAxity.module.scss";
 
 const NavMenuCentralAxity: React.FC<INavMenuCentralAxityProps> = (props) => {
   const { listMenu } = props;
-  console.log(listMenu);
-
   return (
     <nav className={styles.nav_content}>
       <ul className={styles.nav}>
@@ -23,6 +21,7 @@ const NavMenuCentralAxity: React.FC<INavMenuCentralAxityProps> = (props) => {
                 Title={itemMenu.Title}
                 Link={itemMenu.Link}
                 childrenList={itemMenu.children}
+                abrirPagNueva={itemMenu.AbrirPagNueva}
               />
             ))
           : ""}

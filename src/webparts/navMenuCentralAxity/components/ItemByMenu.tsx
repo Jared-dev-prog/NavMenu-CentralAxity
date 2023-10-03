@@ -7,20 +7,32 @@ import "./NavMenuCentralAxity.module.scss";
 import styles from "./NavMenuCentralAxity.module.scss";
 
 const ItemByMenu: React.FC<ItemMenuView> = (props) => {
-  const { Title, Link, childrenList } = props;
-  console.log("item 2 ", Title, Link, childrenList);
-  const handleRedirect = (url: string): void => {
-    window.open(url);
+  const { Title, Link, childrenList, abrirPagNueva } = props;
+  const handleRedirect = (url: string, typeOpen: boolean): void => {
+    const type = typeOpen ? "_blank" : "_self";
+    window.open(url, type);
   };
   return (
     <li>
-      <span className={childrenList.length !== 0 ? styles.title : ""}>{Title}</span>
+      <span
+        className={childrenList.length !== 0 ? styles.title : ""}
+        onClick={() => handleRedirect(Link, abrirPagNueva)}
+      >
+        {Title}
+      </span>
       <ul className={childrenList.length !== 0 ? styles.dropdown : ""}>
         {childrenList !== undefined
           ? childrenList.map((itemMenu, index) => (
-              <div key={index} onClick={() => handleRedirect(itemMenu.Link)}>
+              <div
+                key={index}
+                onClick={() =>
+                  handleRedirect(itemMenu.Link, itemMenu.AbrirPagNueva)
+                }
+              >
                 <li className={""}>
-                  <span className={styles.text_color_black}>{itemMenu.Title}</span>
+                  <span className={styles.text_color_black}>
+                    {itemMenu.Title}
+                  </span>
                 </li>
               </div>
             ))
