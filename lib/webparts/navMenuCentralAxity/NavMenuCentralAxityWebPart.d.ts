@@ -12,6 +12,7 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
     render(): void;
     protected onInit(): Promise<void>;
     private _getListMenu;
+    private _getUrlStyle;
     private _getListMenuOrder;
     private _generateListMenu;
     private _getItemFatherMenu;

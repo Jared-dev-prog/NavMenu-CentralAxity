@@ -49,22 +49,20 @@
   }
 
   > li {
+    margin: 4px;
     position: relative;
-    flex-grow: 1;
     flex-shrink: 0;
-    height: 55px;
     font-size: 14px;
     text-align: center;
     letter-spacing: 1px;
     cursor: pointer;
     border-right: 1px solid #72269d;
-    min-width: 100px;
     max-width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-width: 120px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
   }
-
   > li:hover {
     background: #72269d;
 

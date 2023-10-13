@@ -12,7 +12,7 @@ import {
   INavMenuCentralAxityProps,
   ItemMenu,
 } from "./components/INavMenuCentralAxityProps";
-import { NAME_LIST, ROUTES } from "./components/constants/routes";
+import { NAMEROUTES, NAME_LIST } from "./components/constants/routes";
 import { SPHttpClient, SPHttpClientResponse } from "@microsoft/sp-http";
 
 export interface INavMenuCentralAxityWebPartProps {
@@ -45,7 +45,7 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
 
   private async _getListMenu(): Promise<ItemMenu[]> {
     const listTitle = NAME_LIST.navMenu;
-    const endpointList = `${ROUTES.routeListConsultatory}/_api/web/lists/getbytitle('${listTitle}')/items`;
+    const endpointList = `${this._getUrlStyle()}/_api/web/lists/getbytitle('${listTitle}')/items`;
     const response: SPHttpClientResponse = await this.context.spHttpClient.get(
       endpointList,
       SPHttpClient.configurations.v1
@@ -57,6 +57,14 @@ export default class NavMenuCentralAxityWebPart extends BaseClientSideWebPart<IN
       [...dataResponse.value]
     );
     return Promise.resolve(this._getListMenuOrder([...listMenu]));
+  }
+  private _getUrlStyle(): string {
+    const urlAbsolute = this.context.pageContext.web.absoluteUrl;
+    const indexAlias = urlAbsolute.indexOf(NAMEROUTES.consultancyAlias);
+    const index = urlAbsolute.indexOf(NAMEROUTES.consultancy);
+    return indexAlias !== -1
+      ? `${urlAbsolute.substring(0, indexAlias)}${NAMEROUTES.consultancyAlias}`
+      : `${urlAbsolute.substring(0, index)}${NAMEROUTES.consultancy}`;
   }
   private _getListMenuOrder(dataResponse: ItemMenu[]): ItemMenu[] {
     return dataResponse.length > 0

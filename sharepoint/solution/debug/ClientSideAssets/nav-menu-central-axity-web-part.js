@@ -247,7 +247,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__26ea__;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "JPst");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".menu_b744247d{-ms-flex-pack:distribute;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-content:space-around;list-style:none;padding:10px}.submenu_b744247d{background-color:#333;display:none;left:0;position:absolute;top:100%;width:200px;z-index:1}.submenu_b744247d li{list-style:none;margin:0;padding:0}.nav_content_b744247d{font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;height:100%;width:100%}.nav_b744247d{-ms-flex-align:center;align-items:center;background:#3c1053;color:#e7e6f1;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;list-style:none;margin:0 auto;padding-left:15px;padding-right:15px;position:relative;text-align:center;width:100%}.nav_b744247d span{display:inline-block;padding-left:5px}.nav_b744247d>li{-ms-flex-positive:1;-ms-flex-negative:0;-ms-flex-pack:center;-ms-flex-align:center;align-items:center;border-right:1px solid #72269d;cursor:pointer;display:-ms-flexbox;display:flex;flex-grow:1;flex-shrink:0;font-size:14px;height:55px;justify-content:center;letter-spacing:1px;max-width:200px;min-width:100px;position:relative;text-align:center}.nav_b744247d>li:hover{background:#72269d}.nav_b744247d>li:hover .dropdown_b744247d{transform:translate(0);visibility:visible;width:200px;z-index:1}.nav_b744247d>li:hover .dropdown_b744247d li{line-height:35px;padding-left:10px;text-align:left}.nav_b744247d>li:hover .dropdown_b744247d>li{animation-duration:.3s;animation-fill-mode:backwards;animation-name:slideInLeft_b744247d;animation-timing-function:ease-in-out}.nav_b744247d>li:hover .dropdown_b744247d li:hover{background-color:#d8d5da}.nav_b744247d>li:first-child{border-top-left-radius:6px}.title_b744247d:after{color:#fff;content:\"\\25BC\";font-size:8px;padding:5px;text-align:start}.text_color_white_b744247d{color:#e7e6f1}.text_color_black_b744247d{color:#3c1053;font-size:12px;font-weight:400}.hover_black_b744247d:hover{background-color:#d8d5da}.dropdown_b744247d{background:#f1f1f1;border-bottom-left-radius:6px;border-bottom-right-radius:6px;box-shadow:1px 2px 5px -1px rgba(0,0,0,.15),0 4px 14px -1px rgba(0,0,0,.1);-ms-flex-direction:column;flex-direction:column;left:0;list-style:none;margin:0;padding:0;position:absolute;right:0;top:100%;transform:translateY(-60px);transition:transform .2s ease-out,opacity .2s,z-index 0s .2s;visibility:hidden;z-index:-1}.dropdown_b744247d,.none_b744247d{display:-ms-flexbox;display:flex}@keyframes slideInLeft_b744247d{0%{opacity:0;transform:translate(-25%)}to{opacity:1;transform:translate(0)}}", ""]);
+exports.push([module.i, ".menu_c0ab232d{-ms-flex-pack:distribute;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-content:space-around;list-style:none;padding:10px}.submenu_c0ab232d{background-color:#333;display:none;left:0;position:absolute;top:100%;width:200px;z-index:1}.submenu_c0ab232d li{list-style:none;margin:0;padding:0}.nav_content_c0ab232d{font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;height:100%;width:100%}.nav_c0ab232d{-ms-flex-align:center;align-items:center;background:#3c1053;color:#e7e6f1;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;list-style:none;margin:0 auto;padding-left:15px;padding-right:15px;position:relative;text-align:center;width:100%}.nav_c0ab232d span{display:inline-block;padding-left:5px}.nav_c0ab232d>li{-ms-flex-negative:0;border-right:1px solid #72269d;cursor:pointer;flex-shrink:0;font-size:14px;letter-spacing:1px;margin:4px;max-width:200px;min-width:120px;padding-bottom:10px;padding-right:10px;padding-top:10px;position:relative;text-align:center}.nav_c0ab232d>li:hover{background:#72269d}.nav_c0ab232d>li:hover .dropdown_c0ab232d{transform:translate(0);visibility:visible;width:200px;z-index:1}.nav_c0ab232d>li:hover .dropdown_c0ab232d li{line-height:35px;padding-left:10px;text-align:left}.nav_c0ab232d>li:hover .dropdown_c0ab232d>li{animation-duration:.3s;animation-fill-mode:backwards;animation-name:slideInLeft_c0ab232d;animation-timing-function:ease-in-out}.nav_c0ab232d>li:hover .dropdown_c0ab232d li:hover{background-color:#d8d5da}.nav_c0ab232d>li:first-child{border-top-left-radius:6px}.title_c0ab232d:after{color:#fff;content:\"\\25BC\";font-size:8px;padding:5px;text-align:start}.text_color_white_c0ab232d{color:#e7e6f1}.text_color_black_c0ab232d{color:#3c1053;font-size:12px;font-weight:400}.hover_black_c0ab232d:hover{background-color:#d8d5da}.dropdown_c0ab232d{background:#f1f1f1;border-bottom-left-radius:6px;border-bottom-right-radius:6px;box-shadow:1px 2px 5px -1px rgba(0,0,0,.15),0 4px 14px -1px rgba(0,0,0,.1);-ms-flex-direction:column;flex-direction:column;left:0;list-style:none;margin:0;padding:0;position:absolute;right:0;top:100%;transform:translateY(-60px);transition:transform .2s ease-out,opacity .2s,z-index 0s .2s;visibility:hidden;z-index:-1}.dropdown_c0ab232d,.none_c0ab232d{display:-ms-flexbox;display:flex}@keyframes slideInLeft_c0ab232d{0%{opacity:0;transform:translate(-25%)}to{opacity:1;transform:translate(0)}}", ""]);
 // Exports
 module.exports = exports;
 
@@ -1385,17 +1385,17 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 __webpack_require__(/*! ./NavMenuCentralAxity.module.css */ "f/5p");
 var styles = {
-    menu: 'menu_b744247d',
-    submenu: 'submenu_b744247d',
-    nav_content: 'nav_content_b744247d',
-    nav: 'nav_b744247d',
-    dropdown: 'dropdown_b744247d',
-    slideInLeft: 'slideInLeft_b744247d',
-    title: 'title_b744247d',
-    text_color_white: 'text_color_white_b744247d',
-    text_color_black: 'text_color_black_b744247d',
-    hover_black: 'hover_black_b744247d',
-    none: 'none_b744247d'
+    menu: 'menu_c0ab232d',
+    submenu: 'submenu_c0ab232d',
+    nav_content: 'nav_content_c0ab232d',
+    nav: 'nav_c0ab232d',
+    dropdown: 'dropdown_c0ab232d',
+    slideInLeft: 'slideInLeft_c0ab232d',
+    title: 'title_c0ab232d',
+    text_color_white: 'text_color_white_c0ab232d',
+    text_color_black: 'text_color_black_c0ab232d',
+    hover_black: 'hover_black_c0ab232d',
+    none: 'none_c0ab232d'
 };
 /* harmony default export */ __webpack_exports__["default"] = (styles);
 /* tslint:enable */ 
@@ -1810,7 +1810,7 @@ var NavMenuCentralAxityWebPart = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0:
                         listTitle = _components_constants_routes__WEBPACK_IMPORTED_MODULE_6__["NAME_LIST"].navMenu;
-                        endpointList = "".concat(_components_constants_routes__WEBPACK_IMPORTED_MODULE_6__["ROUTES"].routeListConsultatory, "/_api/web/lists/getbytitle('").concat(listTitle, "')/items");
+                        endpointList = "".concat(this._getUrlStyle(), "/_api/web/lists/getbytitle('").concat(listTitle, "')/items");
                         return [4 /*yield*/, this.context.spHttpClient.get(endpointList, _microsoft_sp_http__WEBPACK_IMPORTED_MODULE_7__["SPHttpClient"].configurations.v1)];
                     case 1:
                         response = _a.sent();
@@ -1823,6 +1823,14 @@ var NavMenuCentralAxityWebPart = /** @class */ (function (_super) {
                 }
             });
         });
+    };
+    NavMenuCentralAxityWebPart.prototype._getUrlStyle = function () {
+        var urlAbsolute = this.context.pageContext.web.absoluteUrl;
+        var indexAlias = urlAbsolute.indexOf(_components_constants_routes__WEBPACK_IMPORTED_MODULE_6__["NAMEROUTES"].consultancyAlias);
+        var index = urlAbsolute.indexOf(_components_constants_routes__WEBPACK_IMPORTED_MODULE_6__["NAMEROUTES"].consultancy);
+        return indexAlias !== -1
+            ? "".concat(urlAbsolute.substring(0, indexAlias)).concat(_components_constants_routes__WEBPACK_IMPORTED_MODULE_6__["NAMEROUTES"].consultancyAlias)
+            : "".concat(urlAbsolute.substring(0, index)).concat(_components_constants_routes__WEBPACK_IMPORTED_MODULE_6__["NAMEROUTES"].consultancy);
     };
     NavMenuCentralAxityWebPart.prototype._getListMenuOrder = function (dataResponse) {
         return dataResponse.length > 0
@@ -3260,19 +3268,23 @@ if(content.locals) module.exports = content.locals;
 /*!*************************************************************************!*\
   !*** ./lib/webparts/navMenuCentralAxity/components/constants/routes.js ***!
   \*************************************************************************/
-/*! exports provided: ROUTES, NAME_LIST */
+/*! exports provided: ROUTES, NAME_LIST, NAMEROUTES */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROUTES", function() { return ROUTES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NAME_LIST", function() { return NAME_LIST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NAMEROUTES", function() { return NAMEROUTES; });
 var ROUTES = {
     generic: "https://intellego365.sharepoint.com/sites/",
-    routeListConsultatory: "/sites/CentralAxity/México/Consultoria2/",
 };
 var NAME_LIST = {
     navMenu: "NavMenu",
+};
+var NAMEROUTES = {
+    consultancyAlias: "Consultoria2",
+    consultancy: "Consultoria",
 };
 
 
